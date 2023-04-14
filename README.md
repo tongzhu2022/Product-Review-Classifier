@@ -4,6 +4,7 @@
 - The dataset used come from Amazon reviews as the training data
 
 ```
+
 import json
 
 file_path = '/Users/tongzhu/python_projects/ml/text/books_small_10000.json'
@@ -16,3 +17,4 @@ with open(file_path) as f:
 #       print(line['overall'])
         reviews.append(Review(line['reviewText'], line['overall']))  # Review(text, score)
 ```
+
