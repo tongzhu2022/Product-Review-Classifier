@@ -25,17 +25,17 @@ class ReviewContainer:
         self.reviews = reviews
         
     def get_text(self):
-        return [i.text for i in self.reviews]  # method for list comprehension (text)
+        return [i.text for i in self.reviews]
         
     def get_sentiment(self):  # same method but in different class
-        return [i.sentiment for i in self.reviews]  # method for list comprehension (sentiment)
+        return [i.sentiment for i in self.reviews]
     
     def evenly_distribute(self):
         negative = list(filter(lambda x: x.sentiment == "Negative", self.reviews))
         positive = list(filter(lambda x: x.sentiment == "Positive", self.reviews))
-        positive_shrunk = positive[:len(negative)]  # shrunk the number of positive reviews
+        positive_shrunk = positive[:len(negative)]
         self.reviews = positive_shrunk + negative
-        random.shuffle(self.reviews)  # shuffle the order of positive and negative reviews
+        random.shuffle(self.reviews)
 ```
 
 - Import the dataset
