@@ -99,3 +99,34 @@ Running the above code will produce the following output:
 ```
 0.8076923076923077
 ```
+
+- F1 score
+```python
+from sklearn.metrics import f1_score
+
+f1_score(test_y, clf_svm.predict(test_x_vectors), average=None, labels=['Positive', 'Negative'])
+```
+Running the above code will produce the following output:
+```
+array([0.80582524, 0.80952381])
+```
+
+- Try and improve the model fine tuning the parameters
+```python
+from sklearn.model_selection import GridSearchCV
+
+parameters = {'kernel': ('linear', 'rbf'),
+              'C': (0.5, 1, 2, 3, 4, 5, 10)}
+
+untuned_clf_svm = svm.SVC()
+tuned_clf_svm = GridSearchCV(untuned_clf_svm, parameters, cv=5)
+tuned_clf_svm.fit(train_x_vectors, train_y)
+
+print("Best parameters found: ", tuned_clf_svm.best_params_)
+print("Best score achieved: ", tuned_clf_svm.best_score_)
+```
+Running the above code will produce the following output:
+```
+Best parameters found:  {'C': 3, 'kernel': 'rbf'}
+Best score achieved:  0.8313957307060754
+```
