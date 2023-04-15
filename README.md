@@ -74,7 +74,7 @@ test_y = test_container.get_sentiment()
 
 - Vectorize the reviews
 ```python
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import Vectorizer, TfidfVectorizer
 
 vectorizer = TfidfVectorizer()
 
