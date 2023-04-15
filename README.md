@@ -27,7 +27,7 @@ class ReviewContainer:
     def get_text(self):
         return [i.text for i in self.reviews]
         
-    def get_sentiment(self):  # same method but in different class
+    def get_sentiment(self):
         return [i.sentiment for i in self.reviews]
     
     def evenly_distribute(self):
