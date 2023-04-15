@@ -95,3 +95,7 @@ clf_svm.fit(train_x_vectors, train_y)
 ```python
 print(clf_svm.score(test_x_vectors, test_y))
 ```
+Running the above code will produce the following output:
+```
+0.8076923076923077
+```
