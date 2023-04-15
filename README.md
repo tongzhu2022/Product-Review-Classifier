@@ -1,5 +1,5 @@
-# Text Classifier
-- In this project I built a machine learning model that automatically classifies text as either being positive or negative<br>
+# Product Review Classifier
+- In this project I built a machine learning model that automatically classifies review as either being positive or negative<br>
 - The training dataset come from Amazon reviews<br><br>
 
 - To begin, 2 classes are defined to make the code more readable
