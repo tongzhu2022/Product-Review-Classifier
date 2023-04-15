@@ -130,3 +130,15 @@ Running the above code will produce the following output:
 Best parameters found:  {'C': 3, 'kernel': 'rbf'}
 Best score achieved:  0.8313957307060754
 ```
+
+- Writing some random review samples to test the classifier
+```python
+random_test = ['Too bad DO NOT buy', 'not fun at all', 'so damn good']
+random_test_vectors = vectorizer.transform(random_test)
+
+clf_svm.predict(random_test_vectors)
+```
+Running the above code will produce the following output:
+```
+array(['Negative', 'Negative', 'Positive'], dtype='<U8')
+```
